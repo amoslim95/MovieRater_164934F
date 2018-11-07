@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMovie"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_text"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/et_movie_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_desc"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="@string/et_movie_desc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lang_text"/>
+
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbtButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtn1_text"
+            />
+
+        <RadioButton
+            android:id="@+id/rbtButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtn2_text"
+            />
+
+        <RadioButton
+            android:id="@+id/rbtButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtn3_text"
+            />
+
+        <RadioButton
+            android:id="@+id/rbtButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtn4_text"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Release_text"/>
+
+    <EditText
+        android:id="@+id/daterelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:inputType="date"
+        android:hint="@string/et_Release_text" />
+
+    <CheckBox
+        android:id="@+id/chb1audi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chb_audi"
+        />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chklinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="0.4"
+            android:weightSum="1"
+            android:visibility="invisible"
+            >
+
+            <CheckBox
+                android:id="@+id/chb2vio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chb_vio"
+                android:layout_weight="0.5"/>
+
+            <CheckBox
+                android:id="@+id/chb3lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chb_lang"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMyButton"
+            android:text="@string/but_add_movie"
+            android:onClick="onMyBtnClick"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
