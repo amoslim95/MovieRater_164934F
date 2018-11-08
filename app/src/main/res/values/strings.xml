@@ -1,5 +1,8 @@
 <resources>
+
     <string name="app_name">MovieRater</string>
+
+    <!--Add Movie-->
     <string name="name_text">Name</string>
     <string name="et_movie_title">Enter the title of movie</string>
     <string name="movie_desc">Description</string>
@@ -15,14 +18,24 @@
     <string name="Release_text">Release data</string>
     <string name="et_Release_text">Enter release data</string>
 
-    /* --- checkbox --- */
     <string name="chb_audi">Not suitable for all audience</string>
     <string name="chb_vio">Violence</string>
     <string name="chb_lang">Language used</string>
 
-
     <string name="but_add_movie">ADD MOVIE</string>
 
+    <!--Movie_Details-->
 
+    <string name="but_add_movie"></string>
+    <string name="but_add_movie"></string>
+    <string name="but_add_movie"></string>
+    <string name="but_add_movie"></string>
+    <string name="but_add_movie"></string>
+
+
+
+    <!--Rate Movie-->
+    <string name="rate_text">Enter your review for the movie :</string>
+    <string name="sharetext">Share your view on the show</string>
 
 </resources>

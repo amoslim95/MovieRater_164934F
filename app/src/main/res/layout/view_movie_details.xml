@@ -6,19 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".AddMovie"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="8">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0.2">
 
         <ImageView
-            android:id="@+id/MovieImage"
+            android:id="@+id/ic_black"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
             android:src="@mipmap/logo" />
+
 
     </LinearLayout>
 
@@ -33,25 +35,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title:"
+
         />
+
+    <TextView
+        android:id="@+id/NameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_weight="0.5"/>
+
     <TextView
         android:id="@+id/overviewtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Overview:"
         />
+
+    <TextView
+        android:id="@+id/ovtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego Venom to save his life"
+        android:layout_weight="0.5"/>
+
+
     <TextView
         android:id="@+id/langtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Langauge:"
         />
+
+    <TextView
+        android:id="@+id/langtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_weight="0.5"/>
+
+
+
     <TextView
         android:id="@+id/Releasedatetag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Release Date"
         />
+
+    <TextView
+        android:id="@+id/DateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:textSize="18sp"
+        android:layout_weight="0.5"/>
+
     <TextView
         android:id="@+id/suitabletag"
         android:layout_width="wrap_content"
@@ -59,6 +99,12 @@
         android:text="Suitable for children below 13:"
         />
 
+    <TextView
+        android:id="@+id/suitabletxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_weight="0.5"/>
 
 
 

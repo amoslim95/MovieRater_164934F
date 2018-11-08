@@ -27,6 +27,7 @@ class AddMovie : AppCompatActivity() {
 
     }
 
+
     fun onMyBtnClick(v: View){
 
 
@@ -35,8 +36,9 @@ class AddMovie : AppCompatActivity() {
         var resdate = txtdaterelease.text.toString()
         var laugauge = ""
         var audichecked =""
-        var reason = ""
-
+        var reason1 = ""
+        var reason2 = ""
+        var reason3= ""
 
         if (rbtneng.isChecked == true) {
             laugauge = "English"
@@ -55,30 +57,27 @@ class AddMovie : AppCompatActivity() {
 
         if (chbaudi.isChecked == false) {
             audichecked = "true"
+            reason3 = "null"
+
         }
         else {
             audichecked = "false"
+
         }
 
-
-        if(chb3lang.isChecked == true)
+        if (chblang.isChecked == true)
         {
-            reason="Langauge"
+            reason1="Langauge"
         }
         else
-        {
-            reason=""
-        }
+            reason1 =""
 
-
-        if (chb2vio.isChecked == true)
+        if (chbvio.isChecked == true)
         {
-            reason="Violence"
+            reason2="Violence"
         }
         else
-            reason =""
-
-
+            reason2 =""
 
 
         Toast.makeText(getApplicationContext(), "Title = ${titlename}"
@@ -86,9 +85,13 @@ class AddMovie : AppCompatActivity() {
                 + "\n" + "Release date = ${resdate}"
                 + "\n" + "Lauguage = ${laugauge}"
                 + "\n" + "Suitable for ages = ${audichecked}"
-                + "\n" + "Reason: ${reason}"
+                + "\n" + "Reason: ${reason3} "
+                + "\n" + "${reason1}"
+                + "\n" + "${reason2}"
 
             ,Toast.LENGTH_SHORT).show()
 
     }
+
+
 }

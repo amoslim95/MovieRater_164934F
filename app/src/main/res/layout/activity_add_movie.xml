@@ -19,6 +19,7 @@
         android:id="@+id/lblname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         android:text="@string/name_text"/>
 
     <EditText
@@ -26,39 +27,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
+        android:textSize="20sp"
         android:hint="@string/et_movie_title" />
 
     <TextView
         android:id="@+id/lbldesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/movie_desc"/>
+        android:text="@string/movie_desc"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/txtdesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
+        android:textSize="20sp"
         android:hint="@string/et_movie_desc"/>
 
     <TextView
         android:id="@+id/lbllang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lang_text"/>
+        android:text="@string/lang_text"
+        android:textSize="18sp"/>
 
 
     <RadioGroup
         android:id="@+id/rbtngroup"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <RadioButton
             android:id="@+id/rbtneng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rbtn1_text"
+            android:textSize="18sp"
             />
 
         <RadioButton
@@ -66,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rbtn2_text"
+            android:textSize="18sp"
             />
 
         <RadioButton
@@ -73,6 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rbtn3_text"
+            android:textSize="18sp"
             />
 
         <RadioButton
@@ -80,6 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rbtn4_text"
+            android:textSize="18sp"
             />
     </RadioGroup>
 
@@ -87,7 +97,8 @@
         android:id="@+id/lblrelease"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Release_text"/>
+        android:text="@string/Release_text"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/txtdaterelease"
@@ -95,6 +106,7 @@
         android:layout_height="wrap_content"
         android:editable="false"
         android:inputType="date"
+        android:textSize="20sp"
         android:hint="@string/et_Release_text" />
 
     <CheckBox
@@ -102,6 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/chb_audi"
+        android:textSize="18sp"
         />
 
     </LinearLayout>
@@ -111,23 +124,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="0.4"
+            android:layout_weight="0.3"
             android:weightSum="1"
             android:visibility="invisible"
             >
 
             <CheckBox
-                android:id="@+id/chb2vio"
+                android:id="@+id/chbvio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chb_vio"
+                android:textSize="15dp"
                 android:layout_weight="0.5"/>
 
             <CheckBox
-                android:id="@+id/chb3lang"
+                android:id="@+id/chblang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chb_lang"
+                android:textSize="15dp"
                 android:layout_weight="0.5"/>
         </LinearLayout>
 
@@ -145,7 +160,7 @@
             android:layout_height="wrap_content"
             android:text="@string/but_add_movie"
             android:onClick="onMyBtnClick"
-            android:textSize="15dp"
+            android:textSize="16sp"
             />
 
     </LinearLayout>
