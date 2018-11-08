@@ -24,13 +24,13 @@
 
     <string name="but_add_movie">ADD MOVIE</string>
 
-    <!--Movie_Details-->
 
-    <string name="but_add_movie"></string>
-    <string name="but_add_movie"></string>
-    <string name="but_add_movie"></string>
-    <string name="but_add_movie"></string>
-    <string name="but_add_movie"></string>
+    <!--Movie_Details-->
+    <string name="lblTitle">Title:</string>
+    <string name="lblOverview">Overview:</string>
+    <string name="lblLang">Langauge:</string>
+    <string name="lblRate">Release date:</string>
+    <string name="lblSuit">Suitable for children below 13:</string>
 
 
 

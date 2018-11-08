@@ -34,7 +34,7 @@
         android:id="@+id/titletag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title:"
+        android:text="@string/lblTitle"
 
         />
 
@@ -49,7 +49,7 @@
         android:id="@+id/overviewtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Overview:"
+        android:text="@string/lblOverview"
         />
 
     <TextView
@@ -65,7 +65,7 @@
         android:id="@+id/langtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Langauge:"
+        android:text="@string/lblLang"
         />
 
     <TextView
@@ -81,7 +81,7 @@
         android:id="@+id/Releasedatetag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Release Date"
+        android:text="@string/lblRate"
         />
 
     <TextView
@@ -96,7 +96,7 @@
         android:id="@+id/suitabletag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suitable for children below 13:"
+        android:text="@string/lblSuit"
         />
 
     <TextView
