@@ -66,6 +66,7 @@
             android:layout_height="wrap_content"
             android:text="@string/rbtn1_text"
             android:textSize="18sp"
+            android:checked="true"
             />
 
         <RadioButton

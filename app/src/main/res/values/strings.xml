@@ -15,8 +15,8 @@
     <string name="rbtn3_text">Malay</string>
     <string name="rbtn4_text">Tamil</string>
 
-    <string name="Release_text">Release data</string>
-    <string name="et_Release_text">Enter release data</string>
+    <string name="Release_text">Release date</string>
+    <string name="et_Release_text">Enter release date</string>
 
     <string name="chb_audi">Not suitable for all audience</string>
     <string name="chb_vio">Violence</string>
