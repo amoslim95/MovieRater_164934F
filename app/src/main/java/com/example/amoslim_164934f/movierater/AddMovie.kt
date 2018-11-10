@@ -14,7 +14,7 @@ class AddMovie : AppCompatActivity() {
         setContentView(R.layout.activity_add_movie)
 
 
-
+    // Hide or show checkbox when selected not suitable for all audience checkbox
         chbaudi.setOnClickListener(View.OnClickListener {
             if(chbaudi.isChecked == true)
             {
@@ -23,14 +23,17 @@ class AddMovie : AppCompatActivity() {
             else
             {
                 chklinear.setVisibility(View.INVISIBLE)
+                chblang.isChecked= false
+                chbvio.isChecked=false
             }
         })
 
-
     }
 
+    //add movie button action
     fun btnAddmovie(v: View) {
 
+        //delcare value
         var titlename = txtname.text.toString()
         var desc = txtdesc.text.toString()
         var resdate = txtdaterelease.text.toString()
@@ -41,6 +44,7 @@ class AddMovie : AppCompatActivity() {
         var reason3 = ""
         rbtneng.isChecked == true
 
+        //vaildation if field/textbox is empty
         if (titlename.length == 0) {
             txtname.setError("Field empty, enter movie title");
 
@@ -67,9 +71,7 @@ class AddMovie : AppCompatActivity() {
                 laugauge = "Tamil"
             }
 
-
-
-//not suitable for audience radio button
+            //not suitable for audience radio button
             if (chblang.isChecked == true) {
                 reason1 = "Langauge"
             } else {
@@ -85,14 +87,12 @@ class AddMovie : AppCompatActivity() {
 
             if (chbaudi.isChecked == true) {
                 audichecked = "true"
-            } else {
+            }
+            else {
                 audichecked = "false"
                 reason3 = "null"
-                reason2 =""
-                reason1 = ""
+
             }
-
-
 
             // Show Toast Display
             Toast.makeText(getApplicationContext(), "Title = ${titlename}"
@@ -103,12 +103,10 @@ class AddMovie : AppCompatActivity() {
                     + "\n" + "Reason: ${reason3} "
                     + "\n" + "${reason1}"
                     + "\n" + "${reason2}"
-                    , Toast.LENGTH_SHORT).show()
-
+                    , Toast.LENGTH_LONG).show()
         }
 
     }
-
 
 }
 

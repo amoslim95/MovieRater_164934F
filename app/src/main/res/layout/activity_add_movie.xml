@@ -134,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chb_vio"
-                android:textSize="15dp"
+                android:textSize="18dp"
                 android:layout_weight="0.5"/>
 
             <CheckBox
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chb_lang"
-                android:textSize="15dp"
+                android:textSize="18dp"
                 android:layout_weight="0.5"/>
         </LinearLayout>
 

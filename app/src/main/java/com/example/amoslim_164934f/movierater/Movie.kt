@@ -4,7 +4,7 @@ package com.example.amoslim_164934f.movierater
  *  Created by Amos Lim 164934F
  */
 
-
+// delcare entity class to store object or values
 class Movie (movieTitle : String, movieDescription: String,releaseDate: String, movieLanguage: String,notSuitable: String, movieViolence: String?, movieLaugUser: String? )
 {
 

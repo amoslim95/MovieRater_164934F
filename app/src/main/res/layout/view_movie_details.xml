@@ -11,17 +11,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.2">
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="4sp"/>
         <ImageView
             android:id="@+id/ic_black"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:src="@mipmap/logo" />
-
-
+            android:layout_height="match_parent"
+            android:src="@mipmap/logo"
+            android:layout_weight="0.9"/>
     </LinearLayout>
 
 <LinearLayout
@@ -35,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblTitle"
-
+        android:textSize="18sp"
         />
 
     <TextView
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:text="@string/txttitle"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/overviewtag"
@@ -57,7 +58,7 @@
         android:id="@+id/ovtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_weight="0.5"
         android:text="@string/txtoverview"/>
 
@@ -67,13 +68,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblLang"
+        android:textSize="18sp"
         />
 
     <TextView
         android:id="@+id/langtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_weight="0.5"
         android:text="@string/txtLang"/>
 
@@ -91,7 +93,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_weight="0.5"
         android:text="@string/txtRelease"/>
 
@@ -100,13 +102,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblSuit"
+        android:textSize="18sp"
         />
 
     <TextView
         android:id="@+id/suitabletxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_weight="0.5"
         android:text="@string/txtSuit"/>
 
