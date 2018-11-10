@@ -42,8 +42,9 @@
         android:id="@+id/NameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5"
+        android:text="@string/txttitle"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/overviewtag"
@@ -57,8 +58,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:text="When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego Venom to save his life"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5"
+        android:text="@string/txtoverview"/>
 
 
     <TextView
@@ -73,7 +74,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5"
+        android:text="@string/txtLang"/>
 
 
 
@@ -90,7 +92,8 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:textSize="18sp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5"
+        android:text="@string/txtRelease"/>
 
     <TextView
         android:id="@+id/suitabletag"
@@ -104,7 +107,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="0.5"
+        android:text="@string/txtSuit"/>
+
 
 
 

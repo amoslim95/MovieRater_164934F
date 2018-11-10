@@ -32,10 +32,19 @@
     <string name="lblRate">Release date:</string>
     <string name="lblSuit">Suitable for children below 13:</string>
 
+    <!--Movie_Details_hardcodetext_Basic-->
+
+    <string name="txttitle">Venom</string>
+    <string name="txtoverview">When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego Venom to save his life</string>
+    <string name="txtLang">English</string>
+    <string name="txtRelease">03-10-2018</string>
+    <string name="txtSuit">Yes</string>
+
+
 
 
     <!--Rate Movie-->
-    <string name="rate_text">Enter your review for the movie :</string>
+    <string name="rate_text">Enter your review for the movie  :</string>
     <string name="sharetext">Share your view on the show</string>
 
 </resources>

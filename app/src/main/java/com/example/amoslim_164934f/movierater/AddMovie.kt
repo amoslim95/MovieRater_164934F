@@ -1,5 +1,6 @@
 package com.example.amoslim_164934f.movierater
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -41,10 +42,10 @@ class AddMovie : AppCompatActivity() {
         rbtneng.isChecked == true
 
         if (titlename.length == 0) {
-            txtname.setError("Field empty");
+            txtname.setError("Field empty, enter movie title");
 
         } else if (desc.length == 0) {
-            txtdesc.setError("Field empty");
+            txtdesc.setError("Field empty, Enter Description");
 
         } else if (resdate.trim().length == 0) {
             txtdaterelease.setError("Field empty");
@@ -69,13 +70,6 @@ class AddMovie : AppCompatActivity() {
 
 
 //not suitable for audience radio button
-            if (chbaudi.isChecked == true) {
-                audichecked = "true"
-            } else {
-                audichecked = "false"
-                reason3 = "null"
-            }
-
             if (chblang.isChecked == true) {
                 reason1 = "Langauge"
             } else {
@@ -88,6 +82,18 @@ class AddMovie : AppCompatActivity() {
                 reason2 = ""
             }
 
+
+            if (chbaudi.isChecked == true) {
+                audichecked = "true"
+            } else {
+                audichecked = "false"
+                reason3 = "null"
+                reason2 =""
+                reason1 = ""
+            }
+
+
+
             // Show Toast Display
             Toast.makeText(getApplicationContext(), "Title = ${titlename}"
                     + "\n" + "Overview = ${desc}"
@@ -98,6 +104,7 @@ class AddMovie : AppCompatActivity() {
                     + "\n" + "${reason1}"
                     + "\n" + "${reason2}"
                     , Toast.LENGTH_SHORT).show()
+
         }
 
     }
