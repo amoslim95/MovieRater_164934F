@@ -113,16 +113,6 @@
         android:layout_weight="0.5"
         android:text="@string/txtSuit"/>
 
-
-
-
-
-
-
-
-
-
-
 </LinearLayout>
 
 

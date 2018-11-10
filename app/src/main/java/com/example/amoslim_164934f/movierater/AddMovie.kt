@@ -39,9 +39,9 @@ class AddMovie : AppCompatActivity() {
         var resdate = txtdaterelease.text.toString()
         var laugauge = ""
         var audichecked = ""
-        var reason1 = ""
-        var reason2 = ""
-        var reason3 = ""
+        var reasonVio = ""
+        var reasonLang = ""
+        var NoReason = ""
         rbtneng.isChecked == true
 
         //vaildation if field/textbox is empty
@@ -51,7 +51,7 @@ class AddMovie : AppCompatActivity() {
         } else if (desc.length == 0) {
             txtdesc.setError("Field empty, Enter Description");
 
-        } else if (resdate.trim().length == 0) {
+        } else if (resdate.length == 0) {
             txtdaterelease.setError("Field empty");
 
         } else {
@@ -73,15 +73,15 @@ class AddMovie : AppCompatActivity() {
 
             //not suitable for audience radio button
             if (chblang.isChecked == true) {
-                reason1 = "Langauge"
+                reasonLang = "Langauge"
             } else {
-                reason1 = ""
+                reasonLang = ""
             }
 
             if (chbvio.isChecked == true) {
-                reason2 = "Violence"
+                reasonVio = "Violence"
             } else {
-                reason2 = ""
+                reasonVio = ""
             }
 
 
@@ -90,7 +90,7 @@ class AddMovie : AppCompatActivity() {
             }
             else {
                 audichecked = "false"
-                reason3 = "null"
+                NoReason = "null"
 
             }
 
@@ -100,9 +100,9 @@ class AddMovie : AppCompatActivity() {
                     + "\n" + "Release date = ${resdate}"
                     + "\n" + "Lauguage = ${laugauge}"
                     + "\n" + "Not Suitable for ages = ${audichecked}"
-                    + "\n" + "Reason: ${reason3} "
-                    + "\n" + "${reason1}"
-                    + "\n" + "${reason2}"
+                    + "\n" + "Reason: ${NoReason} "
+                    + "\n" + "${reasonLang}"
+                    + "\n" + "${reasonVio}"
                     , Toast.LENGTH_LONG).show()
         }
 
