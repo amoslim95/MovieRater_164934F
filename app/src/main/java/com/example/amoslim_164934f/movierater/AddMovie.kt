@@ -15,7 +15,7 @@ class AddMovie : AppCompatActivity() {
 
 
     // Hide or show checkbox when selected not suitable for all audience checkbox
-        chbaudi.setOnClickListener(View.OnClickListener {
+        chbaudi.setOnClickListener {
             if(chbaudi.isChecked == true)
             {
                 chklinear.setVisibility(View.VISIBLE)
@@ -26,7 +26,7 @@ class AddMovie : AppCompatActivity() {
                 chblang.isChecked= false
                 chbvio.isChecked=false
             }
-        })
+        }
 
     }
 
