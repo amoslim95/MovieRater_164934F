@@ -44,51 +44,55 @@ class AddMovie : AppCompatActivity() {
         rbtneng.isChecked
 
         //vaildation if field/textbox is empty
-        if (titlename.isEmpty()) txtname.error = "Field empty, enter movie title"
-        else if (desc.isEmpty()) txtdesc.error = "Field empty, Enter Description"
-        else if (resdate.isEmpty()) txtdaterelease.error = "Field empty"
-        else {
+        when {
+            titlename.isEmpty() -> txtname.error = "Field empty, enter movie title"
+            desc.isEmpty() -> txtdesc.error = "Field empty, Enter Description"
+            resdate.isEmpty() -> txtdaterelease.error = "Field empty"
+            else -> {
 
 
-            // for laugauge checkbox
-            if (rbtneng.isChecked == true) laugauge = "English"
-            else if (rbtnchi.isChecked == true) laugauge = "Chinese"
-            else if (rbtnmalay.isChecked == true) laugauge = "Malay"
-            else if (rbtntamil.isChecked == true) laugauge = "Tamil"
+                // for laugauge checkbox
+                //not suitable for audience radio button
+                when {
+                    rbtneng.isChecked -> laugauge = "English"
+                    rbtnchi.isChecked -> laugauge = "Chinese"
+                    rbtnmalay.isChecked -> laugauge = "Malay"
+                    rbtntamil.isChecked -> laugauge = "Tamil"
 
-            // Show Toast Display
+                }
 
-            //not suitable for audience radio button
-            if (chblang.isChecked == true) {
-                reasonLang = "Langauge"
-            } else {
-                reasonLang = ""
+                //not suitable for audience radio button
+                reasonLang = if (chblang.isChecked == true) {
+                    "Langauge"
+                } else {
+                    ""
+                }
+
+                reasonVio = if (chbvio.isChecked == true) {
+                    "Violence"
+                } else {
+                    ""
+                }
+
+                if (chbaudi.isChecked) {
+                    audichecked = "true"
+                } else {
+                    audichecked = "false"
+                    NoReason = "null"
+
+                }
+
+                // Show Toast Display
+                Toast.makeText(applicationContext, "Title = ${titlename}"
+                        + "\n" + "Overview = ${desc}"
+                        + "\n" + "Release date = ${resdate}"
+                        + "\n" + "Lauguage = ${laugauge}"
+                        + "\n" + "Not Suitable for ages = ${audichecked}"
+                        + "\n" + "Reason: ${NoReason} "
+                        + "\n" + "${reasonLang}"
+                        + "\n" + "${reasonVio}"
+                        , Toast.LENGTH_LONG).show()
             }
-
-            if (chbvio.isChecked == true) {
-                reasonVio = "Violence"
-            } else {
-                reasonVio = ""
-            }
-
-            if (chbaudi.isChecked) {
-                audichecked = "true"
-            } else {
-                audichecked = "false"
-                NoReason = "null"
-
-            }
-
-            // Show Toast Display
-            Toast.makeText(applicationContext, "Title = ${titlename}"
-                    + "\n" + "Overview = ${desc}"
-                    + "\n" + "Release date = ${resdate}"
-                    + "\n" + "Lauguage = ${laugauge}"
-                    + "\n" + "Not Suitable for ages = ${audichecked}"
-                    + "\n" + "Reason: ${NoReason} "
-                    + "\n" + "${reasonLang}"
-                    + "\n" + "${reasonVio}"
-                    , Toast.LENGTH_LONG).show()
         }
 
     }
