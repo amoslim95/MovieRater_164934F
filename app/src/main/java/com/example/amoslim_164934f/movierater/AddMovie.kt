@@ -1,10 +1,12 @@
 package com.example.amoslim_164934f.movierater
 
+import android.app.DatePickerDialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add_movie.*
+import java.util.*
 
 class AddMovie : AppCompatActivity() {
 
@@ -25,6 +27,22 @@ class AddMovie : AppCompatActivity() {
                 chblang.isChecked= false
                 chbvio.isChecked= false
             }
+        }
+        txtdaterelease.setOnClickListener{
+            val c = Calendar.getInstance()
+            val year: Int = c.get(Calendar.YEAR)
+            val month: Int = c.get(Calendar.MONTH)
+            val day: Int = c.get(Calendar.DAY_OF_MONTH)
+
+            val dpd = DatePickerDialog(this, android.R.style.Theme_Holo_Dialog, DatePickerDialog.OnDateSetListener{ datePicker, year, monthOfYear, dayOfMonth ->
+                if(dayOfMonth < 10){
+                    txtdaterelease.setText("0$dayOfMonth-${monthOfYear+1}-$year")
+                }else{
+                    txtdaterelease.setText("$dayOfMonth-${monthOfYear+1}-$year")
+                }
+
+            }, year, month, day)
+            dpd.show()
         }
 
     }
