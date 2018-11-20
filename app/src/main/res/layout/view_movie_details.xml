@@ -64,6 +64,40 @@
 
 
     <TextView
+        android:id="@+id/lblreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/lblReview"/>
+    <!-- rate start-->
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratestar"
+        android:stepSize="0.5"
+        android:numStars="5"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/rate_movie_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_weight="0.5"
+        android:text="@string/txtReview"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/txtMovieReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_weight="0.5"
+        android:text="@string/txtReview"/>
+
+
+    <TextView
         android:id="@+id/langtag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,13 +139,35 @@
         android:textSize="18sp"
         />
 
-    <TextView
-        android:id="@+id/suitabletxt"
+    <LinearLayout
+        android:id="@+id/chklinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_weight="0.5"
-        android:text="@string/txtSuit"/>
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/suitabletxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight="0.456"
+            android:text="@string/txtSuit"/>
+        <TextView
+            android:id="@+id/viotxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight="0.38"
+            android:text="(Violence)"/>
+        <TextView
+            android:id="@+id/lantxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_weight="0.36"
+            android:text="(Language)"/>
+
+    </LinearLayout>
 
 </LinearLayout>
 
