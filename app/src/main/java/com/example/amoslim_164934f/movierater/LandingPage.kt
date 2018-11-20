@@ -44,13 +44,3 @@ class LandingPage : AppCompatActivity() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-

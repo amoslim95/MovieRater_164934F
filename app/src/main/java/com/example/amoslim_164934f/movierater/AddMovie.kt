@@ -166,13 +166,3 @@ class AddMovie : AppCompatActivity() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
