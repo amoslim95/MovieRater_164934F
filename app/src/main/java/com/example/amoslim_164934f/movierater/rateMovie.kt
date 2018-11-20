@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import kotlinx.android.synthetic.main.rate_movie.*
 
 class rateMovie : AppCompatActivity() {
@@ -18,6 +19,7 @@ class rateMovie : AppCompatActivity() {
     }
     //create back button in action bar
     override fun onSupportNavigateUp(): Boolean {
+
         onBackPressed()
         return true
     }
@@ -33,13 +35,18 @@ class rateMovie : AppCompatActivity() {
         if (item?.itemId == R.id.miSubmit)
         {
 
-            var Ratemovie = ratestar.onRatingBarChangeListener
+            val Ratemovie = ratestar.rating
             var RateMovieTxt = txtdaterelease.text
 
 
             val intent = Intent(this,ViewMovieDetail::class.java)
             intent.getDoubleExtra("movieRateTxt", Ratemovie.toString().toDouble())
             intent.putExtra("movieRate",RateMovieTxt )
+
+            Toast.makeText(applicationContext, "Rate value= ${Ratemovie}"
+
+                    , Toast.LENGTH_SHORT).show()
+
 
             startActivity(intent)
             val actionbar = supportActionBar

@@ -52,6 +52,15 @@ class ViewMovieDetail : AppCompatActivity() {
         return true
     }
 
+    override fun onBackPressed() {
+
+        val intent = Intent(this, LandingPage::class.java)
+        startActivity(intent)
+        finish()
+
+    }
+
+
     // - onCreateContextMenu
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
