@@ -41,8 +41,10 @@ class ViewMovieDetail : AppCompatActivity() {
 
         registerForContextMenu(txtMovieReview)
 
+
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

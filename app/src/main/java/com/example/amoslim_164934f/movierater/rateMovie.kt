@@ -30,7 +30,7 @@ class rateMovie : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.miRefresh)
+        if (item?.itemId == R.id.miSubmit)
         {
 
             var Ratemovie = ratestar.onRatingBarChangeListener
