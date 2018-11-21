@@ -1,7 +1,10 @@
 package com.example.amoslim_164934f.movierater
 
+<<<<<<< HEAD
 import android.content.Intent
 import android.app.DatePickerDialog
+=======
+>>>>>>> parent of 04525e6... Added Date picker
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,7 +12,6 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add_movie.*
-import java.util.*
 
 class AddMovie : AppCompatActivity() {
 
@@ -32,9 +34,12 @@ class AddMovie : AppCompatActivity() {
                 chbvio.isChecked= false
             }
         }
+<<<<<<< HEAD
 
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
+=======
+>>>>>>> parent of 04525e6... Added Date picker
 
     }
     //create back button in action bar
