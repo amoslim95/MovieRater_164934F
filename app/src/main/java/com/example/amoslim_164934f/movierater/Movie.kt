@@ -5,7 +5,7 @@ package com.example.amoslim_164934f.movierater
  */
 
 // delcare entity class to store object or values
-class Movie (movieTitle : String, movieDescription: String,releaseDate: String, movieLanguage: String,notSuitable: String, movieViolence: String?, movieLaugUser: String?,movieRate: Double? ,movieRateTxt: String? )
+class Movie (movieTitle : String, movieDescription: String,releaseDate: String, movieLanguage: String,notSuitable: String, movieViolence: String?, movieLaugUser: String?,movieRating: Float )
 {
 
     var movieTitle : String
@@ -15,8 +15,8 @@ class Movie (movieTitle : String, movieDescription: String,releaseDate: String, 
     var notSuitable: String
     var movieViolence: String?
     var movieLaugUser: String?
-    var movieRate: Double?
-    var movieRateTxt: String?
+    var movieRating: Float
+//    var movieRateTxt: String?
 
     init {
         this.movieTitle = movieTitle
@@ -26,8 +26,8 @@ class Movie (movieTitle : String, movieDescription: String,releaseDate: String, 
         this.notSuitable = notSuitable
         this.movieViolence= movieViolence
         this.movieLaugUser = movieLaugUser
-        this.movieRate = movieRate
-        this.movieRateTxt= movieRateTxt
+        this.movieRating = movieRating
+//        this.movieRateTxt= movieRateTxt
     }
 
 

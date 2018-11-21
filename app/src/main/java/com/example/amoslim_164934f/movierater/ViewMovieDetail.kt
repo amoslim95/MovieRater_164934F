@@ -7,10 +7,9 @@ import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_add_movie.*
+
 import kotlinx.android.synthetic.main.view_movie_details.*
-import java.util.*
+
 
 class ViewMovieDetail : AppCompatActivity() {
 
@@ -26,8 +25,9 @@ class ViewMovieDetail : AppCompatActivity() {
         val movieViolence = intent.getStringExtra("movieViolence")
         val movieLaugUser = intent.getStringExtra("movieLaugUser")
 
+        val movieRating = intent.getFloatExtra("movieRating",0.0f)
 
-        val newMovie = Movie(movieTitle, movieDescription, releaseDate, movieLanguage, notSuitable, movieViolence, movieLaugUser, movieRate = null, movieRateTxt = null)
+        val newMovie = Movie(movieTitle, movieDescription, releaseDate, movieLanguage, notSuitable, movieViolence, movieLaugUser, movieRating )
 
         NameText.setText(newMovie.movieTitle)
         ovtext.setText(newMovie.movieDescription)
@@ -39,12 +39,12 @@ class ViewMovieDetail : AppCompatActivity() {
         viotxt.setText(newMovie.movieViolence)
         lantxt.setText(newMovie.movieLaugUser)
 
-        registerForContextMenu(txtMovieReview)
+        ratestar.setRating(newMovie.movieRating)
 
+        registerForContextMenu(txtMovieReview)
 
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -53,20 +53,16 @@ class ViewMovieDetail : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-
         val intent = Intent(this, LandingPage::class.java)
         startActivity(intent)
         finish()
-
     }
-
 
     // - onCreateContextMenu
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
 
-        if (v?.id == R.id.txtMovieReview
-        )
+        if (v?.id == R.id.txtMovieReview)
             menu?.add(1, 1001, 1, "Add Review")
     }
 

@@ -17,13 +17,13 @@ class rateMovie : AppCompatActivity() {
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
     }
+
     //create back button in action bar
     override fun onSupportNavigateUp(): Boolean {
 
         onBackPressed()
         return true
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         //Create new menu resource file, main.xml
@@ -34,19 +34,15 @@ class rateMovie : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item?.itemId == R.id.miSubmit)
         {
+            val Ratemovie = ratestar.getRating()
+            // var RateMovieTxt = txtdaterelease.text
 
-            val Ratemovie = ratestar.rating
-            var RateMovieTxt = txtdaterelease.text
+            val intent = Intent(this@rateMovie,ViewMovieDetail::class.java)
+            intent.putExtra("movieRating", Ratemovie)
 
-
-            val intent = Intent(this,ViewMovieDetail::class.java)
-            intent.getDoubleExtra("movieRateTxt", Ratemovie.toString().toDouble())
-            intent.putExtra("movieRate",RateMovieTxt )
-
-            Toast.makeText(applicationContext, "Rate value= ${Ratemovie}"
-
-                    , Toast.LENGTH_SHORT).show()
-
+            //intent.putExtra("movieRateTxt",RateMovieTxt )
+            //  Toast.makeText(applicationContext, "Rate value= ${Ratemovie}"
+            // , Toast.LENGTH_SHORT).show()
 
             startActivity(intent)
             val actionbar = supportActionBar

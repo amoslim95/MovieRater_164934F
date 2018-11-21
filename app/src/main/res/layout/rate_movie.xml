@@ -45,7 +45,6 @@
         android:id="@+id/ratestar"
         android:stepSize="0.5"
         android:numStars="5"
-
         />
 
         <TextView
